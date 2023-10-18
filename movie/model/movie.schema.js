@@ -7,14 +7,14 @@ const movieSchema = new mongoose.Schema
         releaseDate:Date,
         category:String,
         actors: [{ name: String }],
-        image,
-        ratings: [
-          {
-            value: Number,
-            min: 0,
-            max: 10,
-          },
-        ],
+        image:String,
+        // ratings: [
+        //   {
+        //     value: Number,
+        //     min: "0",
+        //     max: "10",
+        //   },
+        // ],
         comments: [
           {
             text: String,
@@ -23,6 +23,6 @@ const movieSchema = new mongoose.Schema
         addedBy: String,
       });
 
-const movieModel = mongoose.model('User',movieSchema);
+const movieModel = mongoose.model('Movie',movieSchema);
 
 module.exports = movieModel
